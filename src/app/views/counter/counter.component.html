@@ -1,0 +1,5 @@
+<p>The current Count is : {{ count }}</p>
+<p *ngIf="count % 2 == 0">The counted value is even</p>
+<button mat-raised-button color="accent" (click)="addCount()">
+  Increase Count
+</button>
