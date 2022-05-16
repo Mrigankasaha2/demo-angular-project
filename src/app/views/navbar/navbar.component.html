@@ -1,3 +1,13 @@
 <mat-toolbar color="primary">
   <span>My Angular Application</span>
+  <span class="example-spacer"></span>
+  <button mat-flat-button color="primary" (click)="routeToComponent('')">
+    Home
+  </button>
+  <button mat-flat-button color="primary" (click)="routeToComponent('/table')">
+    Table
+  </button>
+  <button mat-flat-button color="primary" (click)="routeToComponent('/forms')">
+    Form
+  </button>
 </mat-toolbar>
