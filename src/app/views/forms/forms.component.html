@@ -1,0 +1,24 @@
+<form [formGroup]="myForm" (ngSubmit)="onFormSubmit()">
+  <mat-form-field appearance="outline">
+    <mat-label>Name</mat-label>
+    <input matInput placeholder="Name" type="text" formControlName="name" />
+    <mat-error *ngIf="name && !name.valid && name.touched"
+      >The Field is required</mat-error
+    >
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Age</mat-label>
+    <input matInput placeholder="AGE" type="number" formControlName="age" />
+    <mat-error *ngIf="age && !age.valid && age.touched"
+      >The Field is required</mat-error
+    >
+  </mat-form-field>
+  <button
+    type="submit"
+    mat-raised-button
+    color="accent"
+    [disabled]="!this.myForm.valid"
+  >
+    Submit
+  </button>
+</form>
